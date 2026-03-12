@@ -4,7 +4,7 @@ import { Network, FileText, CheckCircle2, Clock, Download, Eye, Plus, Loader2, L
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+const API = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api' : 'http://localhost:5001/api');
 
 export default function UserDashboard() {
   const navigate = useNavigate();

@@ -4,7 +4,7 @@ import { ArrowLeft, Plus, FileText, Trash2, Edit3, X, Loader2 } from 'lucide-rea
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+const API = import.meta.env.VITE_API_URL || (import.meta.env.PROD ? '/api' : 'http://localhost:5001/api');
 
 export default function AdminMous() {
   const navigate = useNavigate();
