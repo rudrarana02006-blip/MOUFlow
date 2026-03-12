@@ -4,7 +4,7 @@ import { Network, ShieldCheck, Zap, Mail, Lock, User, Building, ArrowRight, Chec
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const API = 'http://localhost:5001/api';
+const API = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
 
 export default function Signup() {
   const navigate = useNavigate();
